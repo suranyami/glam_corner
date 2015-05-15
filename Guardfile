@@ -51,7 +51,10 @@ end
 # zeus: false                          # enables zeus gem.
 # CLI: 'rails server'                  # customizes runner command. Omits all options except `pid_file`!
 
-guard 'rails' do
+rails_optsion = {
+  force_run: true
+}
+guard 'rails', rails_optsion do
   watch('Gemfile.lock')
   watch(%r{^(config|lib)/.*})
 end
@@ -65,7 +68,13 @@ end
 #  * zeus: 'zeus rspec' (requires the server to be started separately)
 #  * 'just' rspec: 'rspec'
 
-guard :rspec, cmd: "bundle exec rspec" do
+rspec_options = {
+  cmd: 'spring rspec -f doc --tty',
+  all_on_start: true,
+  all_after_pass: true
+}
+
+guard :rspec, rspec_options do
   require "guard/rspec/dsl"
   dsl = Guard::RSpec::Dsl.new(self)
 
