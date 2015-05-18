@@ -16,6 +16,10 @@ gem 'pg'
 gem 'puma'
 gem 'sendgrid'
 gem 'simple_form'
+gem 'bourbon'
+gem 'neat'
+gem 'bitters'
+gem 'dotenv'
 
 group :development do
   gem 'better_errors'
