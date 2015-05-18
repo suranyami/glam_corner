@@ -16,11 +16,21 @@ gem 'pg'
 gem 'puma'
 gem 'sendgrid'
 gem 'simple_form'
+gem 'will_paginate'
 gem 'bourbon'
 gem 'neat'
 gem 'bitters'
 gem 'dotenv'
+gem 'rolify'
+gem 'simple-navigation'
+
+gem 'aws-sdk', '< 2.0'
 gem "paperclip", "~> 4.2"
+
+gem 'jquery-datatables-rails'
+gem 'ajax-datatables-rails'
+
+gem 'awesome_print'
 
 group :development do
   gem 'better_errors'
