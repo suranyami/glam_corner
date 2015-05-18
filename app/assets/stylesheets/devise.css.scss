@@ -1,0 +1,13 @@
+@import "bourbon";
+@import "base/base";
+@import "neat";
+
+.devise {
+  @include outer-container(50%);
+}
+
+.links {
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+}
