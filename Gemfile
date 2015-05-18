@@ -20,6 +20,7 @@ gem 'bourbon'
 gem 'neat'
 gem 'bitters'
 gem 'dotenv'
+gem "paperclip", "~> 4.2"
 
 group :development do
   gem 'better_errors'
