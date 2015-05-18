@@ -10,4 +10,12 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :invitable, :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  def name_or_email
+    if first_name || last_name
+      "#{first_name} #{last_name}"
+    else
+      email
+    end
+  end
 end
